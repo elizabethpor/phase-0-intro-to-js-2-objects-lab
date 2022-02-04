@@ -1,23 +1,33 @@
-// Write your solution in this file!
+// created employee object with keys name and streetAddress
 const employee = {
-    name: "Elizabeth",
-    street: "5327 Itaska",
+    name: " ",
+    streetAddress: " ",
 }
+
+// or like this:
+// const employee = {};
+// employee.name = " ";
+// employee.streetAddress = " ";
+
 function updateEmployeeWithKeyAndValue(employee, key, value) {
-    const employeeUpdated = {...employee};
-    employeeUpdated[key] = value;
-    return employeeUpdated;
+    // let newEmployeeObj;
+    // return newEmployeeObj = {...employee, [key]: value};
+
+    return {...employee, [key]: value};
 }
+
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
     employee[key] = value;
     return employee;
 }
+
 function deleteFromEmployeeByKey(employee, key) {
-    const employeeWithoutKey = {...employee};
-    delete employeeWithoutKey[key];
-    return employeeWithoutKey;
+    const newEmployee = {...employee};
+    delete newEmployee[key];
+    return newEmployee;
 }
-function destructivelyDeleteFromEmployeeByKey(employee, key){
+
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
     delete employee[key];
     return employee;
 }
